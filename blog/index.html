@@ -1,35 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>Blog</title>
+    <meta
+      name="description"
+      content="Blog index page summarizing my blogs."
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="/style.css" />
-    <script src="https://cdn.jsdelivr.net/npm/marked@3.0.7/marked.min.js"></script>
-    <script src="blog-loader.js"></script>
+    <script src="/js/particles.min.js"></script>
   </head>
   <body>
     <div class="tabs-container">
-      <div class="tab" onclick="showTab('/')">About Me</div>
-      <div class="tab" onclick="showTab('/blog')">Blog</div>
-      <div class="tab" onclick="showTab('/projects')">Latest Projects</div>
+      <div class="tab" onclick="window.location = '/'">About Me</div>
+      <div class="tab" onclick="window.location = '/blog'">Blog</div>
+      <div class="tab" onclick="window.location = '/projects'">Latest Projects</div>
     </div>
-    <script>
-      function showTab(tabId) {
-        window.location = tabId;
-      }
-    </script>
     <div id="particles-js"></div>
     <div class="container">
       <div class="markdown-content-container">
-        <div id="markdown-content" class="markdown-content"></div>
-        <script src="/render-markdown.js"></script>
-        <script>
-          renderMarkdown("blog.md", "markdown-content");
-        </script>
+        <div id="markdown-content" class="markdown-content">
+          <h1 id="lunas-blog">Luna's Blog</h1>
+          <p>
+            Welcome to my blog! Here, I share my thoughts and experiences on a
+            variety of topics related to ethical hacking, programming, and
+            Linux.
+          </p>
+          <h2 id="topics">Topics</h2>
+          <p>Some of the topics I write about include:</p>
+          <ul>
+            <li>Ethical hacking techniques and tools</li>
+            <li>Programming languages and frameworks</li>
+            <li>Linux distributions and their features</li>
+            <li>Responsible Disclosure and Bug Bounty programs</li>
+            <li>Open-source software and its benefits</li>
+          </ul>
+        </div>
       </div>
-      <hr/>
+      <hr />
       <div id="blog-list"></div>
     </div>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="/dynamic-background.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+    />
+    <script src="/js/dynamic-background.js"></script>
   </body>
 </html>
