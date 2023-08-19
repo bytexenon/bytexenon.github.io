@@ -1,29 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>About Me</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="https://cdn.jsdelivr.net/npm/marked@3.0.7/marked.min.js"></script>
+    <meta
+      name="description"
+      content="About me page descibing my skills and previous experience."
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/js/marked.min.js"></script>
+    <script src="/js/particles.min.js"></script>
   </head>
   <body>
     <div class="tabs-container">
       <div class="tab" onclick="showTab('/')">About Me</div>
       <div class="tab" onclick="showTab('/blog')">Blog</div>
       <div class="tab" onclick="showTab('/projects')">Latest Projects</div>
-      <div class="tab" onclick="showTab('/contacts')">Contacts</div>
+    </div>
+    <div id="particles-js"></div>
+    <div class="container">
+      <div class="profile-header">
+        <img
+          src="https://avatars.githubusercontent.com/u/125568681"
+          alt="Profile Picture"
+        />
+        <div class="info">
+          <h1>Luna Xenon</h1>
+          <b class="pronouns"> She/Her </b>
+          <b class="general-info">
+            Programmer, Ethical hacker, Coffee milk addict
+          </b>
+        </div>
+      </div>
+      <hr />
+      <div class="markdown-content-container">
+        <div id="markdown-content" class="markdown-content"></div>
+      </div>
     </div>
     <script>
       function showTab(tabId) {
-       window.location = tabId;
+        window.location = tabId;
       }
     </script>
-    <div id="particles-js"></div>
-    <div class="container">
-      <div id="markdown-content"></div>
-      <script src="/render-markdown.js"></script>
-      <script>renderMarkdown("about-me.md", "markdown-content")</script>
-    </div>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="/dynamic-background.js"></script>
+    <script src="/js/render-markdown.js"></script>
+    <script>
+      renderMarkdown("/markdown/about-me.md", "markdown-content");
+    </script>
+    <script src="/js/dynamic-background.js"></script>
   </body>
 </html>

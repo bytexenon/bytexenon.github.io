@@ -1,27 +1,33 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My blog</title>
+    <title>Blog</title>
     <link rel="stylesheet" href="/style.css" />
     <script src="https://cdn.jsdelivr.net/npm/marked@3.0.7/marked.min.js"></script>
+    <script src="blog-loader.js"></script>
   </head>
   <body>
     <div class="tabs-container">
       <div class="tab" onclick="showTab('/')">About Me</div>
       <div class="tab" onclick="showTab('/blog')">Blog</div>
       <div class="tab" onclick="showTab('/projects')">Latest Projects</div>
-      <div class="tab" onclick="showTab('/contacts')">Contacts</div>
     </div>
     <script>
       function showTab(tabId) {
-       window.location = tabId;
+        window.location = tabId;
       }
     </script>
     <div id="particles-js"></div>
     <div class="container">
-      <div id="markdown-content"></div>
-      <script src="/render-markdown.js"></script>
-      <script>renderMarkdown("/about-me.md", "markdown-content")</script>
+      <div class="markdown-content-container">
+        <div id="markdown-content" class="markdown-content"></div>
+        <script src="/render-markdown.js"></script>
+        <script>
+          renderMarkdown("blog.md", "markdown-content");
+        </script>
+      </div>
+      <hr/>
+      <div id="blog-list"></div>
     </div>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="/dynamic-background.js"></script>

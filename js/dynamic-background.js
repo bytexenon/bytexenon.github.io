@@ -1,10 +1,11 @@
 window.particlesJS("particles-js", {
+  fps_limit: 30,
   particles: {
     number: {
       value: 70,
       density: {
         enable: true,
-        value_area: 800,
+        value_area: 1000,
       },
     },
     color: {
@@ -66,14 +67,14 @@ window.particlesJS("particles-js", {
     detect_on: "canvas",
     events: {
       onhover: {
-        enable: true,
+        enable: false,
         mode: "repulse",
       },
       onclick: {
-        enable: true,
+        enable: false,
         mode: "push",
       },
-      resize: true,
+      resize: false,
     },
     modes: {
       grab: {

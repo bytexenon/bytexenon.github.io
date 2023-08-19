@@ -1,33 +1,46 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
-
 body {
   font-family: "Open Sans", sans-serif;
   margin: 0;
   padding: 0;
-  overflow: hidden;
 }
 #particles-js {
-  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+  z-index: 0;
   background: #000;
 }
 .container {
   position: relative;
   z-index: 1;
+  backdrop-filter: blur(2px);
+  background: rgba(9, 9, 9, 0.2);
   max-width: 800px;
   margin: 0 auto;
   padding: 40px 0;
 }
-p {
+*:link {
+  color: #FFC0CB;
+}
+*:visited {
+  color: #FF69B4;
+}
+p, ul {
   font-size: 18px;
   line-height: 1.5;
   margin-bottom: 20px;
   color: #fff;
 }
 .tabs-container {
+  z-index: 1;
   display: flex;
-  background-color: #000;
+  position: relative;
+  justify-content: flex-start;
+  align-items: center;
+  background: rgba(9, 9, 9, 0.1);
+  backdrop-filter: blur(2px);
 }
 .tab {
   flex: 1;
@@ -36,9 +49,10 @@ p {
   text-align: center;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  z-index: 1;
 }
 .tab:hover {
-  background-color: #333;
+  background-color: rgba(50, 50, 50, 0.5);
 }
 .content {
   display: none;
@@ -48,4 +62,64 @@ p {
 }
 .content.active {
   display: block;
+}
+.profile-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.profile-header img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.profile-header .info {
+  display: flex;
+  flex-direction: column;
+}
+.profile-header h1 {
+  font-size: 36px;
+  margin: 0;
+  color: #fff;
+}
+.pronouns {
+  font-size: 16px;
+  margin-top: 3px;
+  color: #ccc;
+}
+.general-info {
+  font-size: 20px;
+  margin-top: 10px;
+  color: #ccc;
+}
+.markdown-content-container {
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  margin: auto auto;
+  color: #ccc;
+}
+.not-found-message {
+  font-size: 300%;
+  margin: auto auto;
+  text-align: center;
+}
+
+
+.blog-item {
+  margin-bottom: 20px;
+}
+
+.blog-banner {
+  width: 150px;
+  height: 150px;
+  margin-right: 20px;
+}
+
+.blog-title {
+  font-size: 24px;
+}
+
+.blog-description {
+  margin-top: 10px;
 }
