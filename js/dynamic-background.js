@@ -1,3 +1,4 @@
+/*
 window.particlesJS("particles-js", {
   fps_limit: 30,
   particles: {
@@ -103,3 +104,4 @@ window.particlesJS("particles-js", {
   },
   retina_detect: true,
 });
+*/
