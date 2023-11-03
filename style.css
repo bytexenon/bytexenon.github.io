@@ -1,0 +1,144 @@
+/* Taken from: https://fonts.googleapis.com/css2?family=Open+Sans&display=swap */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v35/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4gaVI.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background: #000;
+}
+.container {
+  position: relative;
+  z-index: 1;
+  backdrop-filter: blur(1px);
+  background: rgba(9, 9, 9, 0.2);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+a:link {
+  color: #a7d5e0;
+}
+a:visited {
+  color: #c9b7e7;
+}
+
+p,
+ul {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: #fff;
+}
+.tabs-container {
+  z-index: 1;
+  display: flex;
+  position: relative;
+  justify-content: flex-start;
+  align-items: center;
+  background: rgba(9, 9, 9, 0.1);
+  backdrop-filter: blur(2px);
+}
+.tab {
+  flex: 1;
+  color: #e8e6e3;
+  padding: 10px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 1;
+}
+.tab:hover {
+  background-color: rgba(50, 50, 50, 0.5);
+}
+.content {
+  display: none;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+.content.active {
+  display: block;
+}
+.profile-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.profile-header img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.profile-header .info {
+  display: flex;
+  flex-direction: column;
+}
+.profile-header h1 {
+  font-size: 36px;
+  margin: 0;
+  color: #fff;
+}
+.pronouns {
+  font-size: 16px;
+  margin-top: 3px;
+  color: #ccc;
+}
+.general-info {
+  font-size: 20px;
+  margin-top: 10px;
+  color: #ccc;
+}
+.markdown-content-container {
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  margin: auto auto;
+  color: #ccc;
+}
+.not-found-message {
+  font-size: 250%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  color: #ccc;
+}
+
+.blog-item {
+  margin-bottom: 20px;
+}
+
+.blog-banner {
+  width: 150px;
+  height: 150px;
+  margin-right: 20px;
+}
+
+.blog-title {
+  font-size: 24px;
+}
+
+.blog-description {
+  margin-top: 10px;
+}
