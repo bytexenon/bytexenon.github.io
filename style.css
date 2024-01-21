@@ -182,3 +182,27 @@ ul {
 .blog-description {
   margin-top: 10px;
 }
+
+#privacy-button-container {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 2;
+  color: #fff;
+}
+
+#privacy-button {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
