@@ -51,8 +51,12 @@ body {
 }
 
 @keyframes fadeOut {
-  from { opacity: 1; }
-  to { opacity: 0; }
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 @keyframes bounceIn {
   0% {
@@ -75,12 +79,11 @@ body {
   animation: bounceIn 1s forwards;
 }
 
-
 a:link {
-  color: #a7d5e0;
+  color: #00ccff;
 }
 a:visited {
-  color: #c9b7e7;
+  color: #ea2cff;
 }
 
 p,
