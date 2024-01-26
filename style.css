@@ -114,12 +114,6 @@ ul {
 .tab:hover {
   background-color: rgba(50, 50, 50, 0.5);
 }
-.about-content {
-  display: none;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 40px 0;
-}
 .content.active {
   display: block;
 }

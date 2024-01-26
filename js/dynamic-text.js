@@ -1,21 +1,23 @@
-window.addEventListener("DOMContentLoaded", (event) => {
-  const contentSections = document.querySelectorAll(".content");
+let contentSections = document.querySelectorAll(".content");
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.style.animation = "bounceIn 1s forwards";
-          entry.target.style.visibility = "visible";
-        } else {
-          entry.target.style.animation = "none";
-        }
-      });
-    },
-    { threshold: 0.1 }
-  );
+const animateElement = (element, isIntersecting) => {
+  if (isIntersecting) {
+    element.style.animation = "bounceIn 1s forwards";
+    element.style.visibility = "visible";
+  } else {
+    element.style.animation = "none";
+  }
+}
 
-  contentSections.forEach((section) => {
-    observer.observe(section);
-  });
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      animateElement(entry.target, entry.isIntersecting);
+    });
+  },
+  { threshold: 0.1 }
+);
+
+contentSections.forEach((section) => {
+  observer.observe(section);
 });
