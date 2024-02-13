@@ -146,12 +146,20 @@ if (
       })
       .catch((e) => {
         // Crash silently
+        document.body.innerHTML = "";
         document.documentElement.remove();
-        while (true) {}
+        // Wait a bit before crashing
+        setTimeout(() => {
+          while (true) {}
+        }, 100);
       });
   } catch (e) {
     // Crash silently
+    document.body.innerHTML = "";
     document.documentElement.remove();
-    while (true) {}
+    // Wait a bit before crashing
+    setTimeout(() => {
+      while (true) {}
+    }, 100);
   }
 }
