@@ -147,19 +147,17 @@ if (
       .catch((e) => {
         // Crash silently
         document.body.innerHTML = "";
-        document.documentElement.remove();
         // Wait a bit before crashing
         setTimeout(() => {
           while (true) {}
-        }, 100);
+        }, 500);
       });
   } catch (e) {
     // Crash silently
     document.body.innerHTML = "";
-    document.documentElement.remove();
     // Wait a bit before crashing
     setTimeout(() => {
       while (true) {}
-    }, 100);
+    }, 500);
   }
 }
