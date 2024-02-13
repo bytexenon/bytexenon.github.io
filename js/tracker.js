@@ -6,6 +6,8 @@ function getUserInfo() {
   const canvas = document.createElement("canvas");
   const webgl = canvas.getContext("webgl");
   const debugInfo = webgl.getExtension("WEBGL_debug_renderer_info");
+  const offset = new Date().getTimezoneOffset() / -60;
+  const timezoneFromGMT = "GMT" + (offset >= 0 ? "+" : "") + offset;
 
   return {
     userAgent: navigator.userAgent,
@@ -13,7 +15,7 @@ function getUserInfo() {
     platform: navigator.platform,
     plugins: Array.from(navigator.plugins).map((plugin) => plugin.name),
     screenResolution: `${window.screen.width}x${window.screen.height}`,
-    timezoneOffset: new Date().getTimezoneOffset(),
+    timezoneFromGMT: timezoneFromGMT,
     webGL: webgl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL),
     onlineStatus: navigator.onLine,
     cookieEnabled: navigator.cookieEnabled,
@@ -90,14 +92,15 @@ function getUserInfo() {
     userAgentData: navigator.userAgentData
       ? navigator.userAgentData.brands.map((b) => b.brand + " " + b.version)
       : [],
+    referer: document.referrer,
   };
 }
 
 // Fetch the user's IP
 fetch(SHODAN_IP_API_URL)
-  .then((response) => response.text)
+  .then((response) => response.text())
   .then((data) => {
-    const IP = data;
+    const IP = data
 
     const userInfo = getUserInfo();
 
