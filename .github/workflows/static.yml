@@ -20,21 +20,24 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "22"
+          node-version: '16'
 
       - name: Install minification tools
         run: |
-          npm install -g minify
+          npm install -g terser clean-css-cli
 
-      - name: Minify files
+      - name: Minify JavaScript files
         run: |
-          find ./data -type f -name '*.js' -exec minify --output {} {} \;
-          find ./data -type f -name '*.css' -exec minify --output {} {} \;
+          find ./data -type f -name '*.js' -exec terser --compress --mangle --output {} -- {} \;
+
+      - name: Minify CSS files
+        run: |
+          find ./data -type f -name '*.css' -exec cleancss -o {} {} \;
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "./data"
+          path: './data'
 
       - name: Deploy to GitHub Pages
         id: deployment
