@@ -446,7 +446,7 @@
               : "cat" === n &&
                 (0, s.jsx)(d.default, {
                   strategy: "beforeInteractive",
-                  src: "https://assets.guns.lol/oneko.js",
+                  src: "/data/oneko.js",
                   id: "_ccat",
                 }),
             "" !== c &&
@@ -514,7 +514,7 @@
           src: "/data/pfp.jpg",
           alt: "User Avatar",
           width: "80em",
-          height: "80em"
+          height: "80em",
         }),
         status: (0, s.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
@@ -1210,296 +1210,10 @@
           children: (0, s.jsx)("div", {
             className: a().discordPresenceContainer,
             style: { marginTop: "20px" },
-            children:
-              r.success && h
-                ? (0, s.jsxs)("div", {
-                    className: a().discordUserInformation,
-                    children: [
-                      (0, s.jsx)("div", {
-                        className: a().discordAvatar,
-                        children: (0, s.jsxs)("div", {
-                          className: a().discordStatus,
-                          children: [
-                            (0, s.jsx)("img", {
-                              src: r.avatar,
-                              alt: "Discord Avatar",
-                            }),
-                            (0, s.jsx)("img", {
-                              src: "https://assets.guns.lol/".concat(
-                                r.status,
-                                ".png"
-                              ),
-                              className: a().discordStatusIcon,
-                              alt: "",
-                            }),
-                          ],
-                        }),
-                      }),
-                      (0, s.jsxs)("div", {
-                        className: a().discordActivity,
-                        children: [
-                          (0, s.jsxs)("div", {
-                            className: a().discordUser,
-                            children: [
-                              (0, s.jsxs)("div", {
-                                className: a().discordUserDiv,
-                                children: [
-                                  (0, s.jsx)("span", {
-                                    style: _.discordUsername,
-                                    children: r.username,
-                                  }),
-                                  (0, s.jsx)("div", {
-                                    className: a().discordUserBadges,
-                                    children: c.map((e, t) =>
-                                      (0, s.jsx)(
-                                        x.e,
-                                        {
-                                          closeDelay: 150,
-                                          offset: 3,
-                                          content: e,
-                                          classNames: v,
-                                          children: (0, s.jsx)(
-                                            "div",
-                                            {
-                                              className: a().discordBadge,
-                                              children: (0, s.jsx)("img", {
-                                                src: m[e],
-                                                alt: "Discord Badge",
-                                              }),
-                                            },
-                                            t
-                                          ),
-                                        },
-                                        t
-                                      )
-                                    ),
-                                  }),
-                                ],
-                              }),
-                              (0, s.jsx)("h3", {
-                                style: { ..._.discordStatus, ...j },
-                                children:
-                                  4 !== h.type && 2 !== h.type
-                                    ? (0, s.jsxs)(s.Fragment, {
-                                        children: [
-                                          (0, s.jsx)("span", {
-                                            className: a().highlight,
-                                            children: u[h.type],
-                                          }),
-                                          " ",
-                                          h.name,
-                                          (0, s.jsx)("br", {}),
-                                          h.details ? h.details : h.state,
-                                        ],
-                                      })
-                                    : g
-                                    ? (0, s.jsxs)(s.Fragment, {
-                                        children: [
-                                          (0, s.jsx)("span", {
-                                            className: a().highlight,
-                                            children: u[g.type],
-                                          }),
-                                          " ",
-                                          g.details,
-                                          (0, s.jsx)("br", {}),
-                                          g.state &&
-                                            "by ".concat(
-                                              g.state.replace(/;/g, ",")
-                                            ),
-                                        ],
-                                      })
-                                    : 4 === h.type &&
-                                      (0, s.jsxs)(s.Fragment, {
-                                        children: [
-                                          h.emoji.startsWith("https://")
-                                            ? (0, s.jsx)("img", {
-                                                src: h.emoji,
-                                                alt: "Discord Emoji",
-                                                className: a().discordEmoji,
-                                              })
-                                            : !h.emoji.startsWith("https://") &&
-                                              (0, s.jsx)("span", {
-                                                className: a().defaultEmoji,
-                                                children: h.emoji,
-                                              }),
-                                          (0, s.jsx)("span", {
-                                            children: h.state,
-                                          }),
-                                        ],
-                                      }),
-                              }),
-                            ],
-                          }),
-                          (0, s.jsx)("div", {
-                            className: a().activityImage,
-                            children:
-                              4 !== h.type && 2 !== h.type
-                                ? h.image &&
-                                  "{}" !== JSON.stringify(h.image) &&
-                                  (0, s.jsx)(x.e, {
-                                    closeDelay: 150,
-                                    content: ""
-                                      .concat(u[h.type], " ")
-                                      .concat(h.name),
-                                    classNames: v,
-                                    children: (0, s.jsx)("img", {
-                                      src: h.image,
-                                      alt: "",
-                                    }),
-                                  })
-                                : g
-                                ? (0, s.jsx)(x.e, {
-                                    closeDelay: 150,
-                                    content: "Listening to "
-                                      .concat(g.details, " ")
-                                      .concat(
-                                        g.state &&
-                                          "by ".concat(
-                                            g.state.replace(/;/g, ",")
-                                          )
-                                      ),
-                                    classNames: v,
-                                    children: (0, s.jsx)("img", {
-                                      src: g.image,
-                                      alt: "",
-                                    }),
-                                  })
-                                : "offline" === h.status && null,
-                          }),
-                        ],
-                      }),
-                    ],
-                  })
-                : r.success && !h
-                ? (0, s.jsxs)("div", {
-                    className: a().discordUserInformation,
-                    children: [
-                      (0, s.jsx)("div", {
-                        className: a().discordAvatar,
-                        children: (0, s.jsxs)("div", {
-                          className: a().discordStatus,
-                          children: [
-                            (0, s.jsx)("img", {
-                              src: r.avatar,
-                              alt: "Discord Avatar",
-                            }),
-                            (0, s.jsx)("img", {
-                              src: "https://assets.guns.lol/".concat(
-                                r.status,
-                                ".png"
-                              ),
-                              className: a().discordStatusIcon,
-                              alt: "",
-                            }),
-                          ],
-                        }),
-                      }),
-                      (0, s.jsxs)("div", {
-                        className: a().discordActivity,
-                        children: [
-                          (0, s.jsxs)("div", {
-                            className: a().discordUser,
-                            children: [
-                              (0, s.jsxs)("div", {
-                                className: a().discordUserDiv,
-                                children: [
-                                  (0, s.jsx)("span", {
-                                    style: _.discordUsername,
-                                    children: r.username,
-                                  }),
-                                  (0, s.jsx)("div", {
-                                    className: a().discordUserBadges,
-                                    children: c.map((e, t) =>
-                                      (0, s.jsx)(
-                                        x.e,
-                                        {
-                                          closeDelay: 150,
-                                          offset: 3,
-                                          content: e,
-                                          classNames: v,
-                                          children: (0, s.jsx)(
-                                            "div",
-                                            {
-                                              className: a().discordBadge,
-                                              children: (0, s.jsx)("img", {
-                                                src: m[e],
-                                                alt: "Discord Badge",
-                                              }),
-                                            },
-                                            t
-                                          ),
-                                        },
-                                        t
-                                      )
-                                    ),
-                                  }),
-                                ],
-                              }),
-                              (0, s.jsx)("h3", {
-                                style: { ..._.discordStatus, ...j },
-                                children:
-                                  "offline" === r.status
-                                    ? (0, s.jsxs)("span", {
-                                        className: a().offlineText,
-                                        children: [
-                                          "last seen ",
-                                          r.lastSeen
-                                            ? (0, k.Q)(
-                                                new Date(1e3 * r.lastSeen)
-                                              ).replace("about ", "") + " ago"
-                                            : "unknown",
-                                        ],
-                                      })
-                                    : (0, s.jsx)("span", {
-                                        children: "currently doing nothing",
-                                      }),
-                              }),
-                            ],
-                          }),
-                          (0, s.jsx)("div", { className: a().activityImage }),
-                        ],
-                      }),
-                    ],
-                  })
-                : (0, s.jsxs)("div", {
-                    className: a().discordNotConnected,
-                    children: [
-                      (0, s.jsxs)("h1", {
-                        style: _.discordUsername,
-                        children: [p.userNotFound, " User Not found"],
-                      }),
-                      d
-                        ? (0, s.jsxs)("h3", {
-                            style: _.discordStatus,
-                            children: [
-                              "Join ",
-                              (0, s.jsx)(b.default, {
-                                href: "https://discord.gg/guns",
-                                target: "_blank",
-                                children: "discord.gg/guns",
-                              }),
-                              " to display your status",
-                            ],
-                          })
-                        : (0, s.jsxs)("h3", {
-                            style: _.discordStatus,
-                            children: [
-                              "Go to ",
-                              (0, s.jsx)(b.default, {
-                                href: "https://guns.lol/account",
-                                target: "_blank",
-                                children: "guns.lol/account",
-                              }),
-                              " and connect your Discord account",
-                            ],
-                          }),
-                    ],
-                  }),
           }),
         });
       }
-      function P(e) {
-      }
+      function P(e) {}
       function L(e) {
         var t;
         let {
@@ -2022,7 +1736,8 @@
                                 },
                               })
                             : r.description,
-                      })],
+                      }),
+                  ],
                 }),
               ],
             }),
@@ -2378,30 +2093,8 @@
         O = n(92830),
         G = n.n(O);
       function J(e) {
-        let { username: t } = e;
         return (0, s.jsx)("div", {
           className: G().containerWrapper,
-          children: (0, s.jsxs)("div", {
-            className: G().container,
-            children: [
-              H.Z.error,
-              (0, s.jsx)("h1", { children: "This user is not claimed" }),
-              (0, s.jsx)("h3", {
-                children:
-                  "Claim this name fast by clicking on the button below!",
-              }),
-              (0, s.jsxs)("div", {
-                className: G().containerButtons,
-                children: [
-                  (0, s.jsx)(b.default, { href: "/", children: "Go Home" }),
-                  (0, s.jsx)(b.default, {
-                    href: "/register?claim=".concat(t),
-                    children: "Claim Now!",
-                  }),
-                ],
-              }),
-            ],
-          }),
         });
       }
       function X() {
@@ -2409,34 +2102,6 @@
           className: G().containerWrapper,
           children: (0, s.jsxs)("div", {
             className: G().container,
-            children: [
-              H.Z.error,
-              (0, s.jsx)("h1", {
-                children: "Uh oh! An unknown error occurred",
-              }),
-              (0, s.jsxs)("h3", {
-                children: [
-                  "Please report this error on our ",
-                  (0, s.jsx)(b.default, {
-                    href: "https://discord.gg/guns",
-                    style: { textDecoration: "none", color: "#b252cc" },
-                    children: "discord server",
-                  }),
-                  ".",
-                ],
-              }),
-              (0, s.jsxs)("div", {
-                className: G().containerButtons,
-                children: [
-                  (0, s.jsx)(b.default, { href: "/", children: "Go Home" }),
-                  (0, s.jsx)(b.default, {
-                    href: "https://discord.gg/guns",
-                    target: "_blank",
-                    children: "Discord Server",
-                  }),
-                ],
-              }),
-            ],
           }),
         });
       }
@@ -2444,34 +2109,6 @@
         let { reason: t } = e;
         return (0, s.jsx)("div", {
           className: G().containerWrapper,
-          children: (0, s.jsxs)("div", {
-            className: G().container,
-            children: [
-              H.Z.error,
-              (0, s.jsxs)("h1", {
-                children: [
-                  "This user has been banned from ",
-                  (0, s.jsx)(b.default, {
-                    href: "/",
-                    style: { textDecoration: "none", color: "#b252cc" },
-                    children: "guns.lol",
-                  }),
-                ],
-              }),
-              (0, s.jsxs)("h3", { children: ["Reason: ", t] }),
-              (0, s.jsxs)("div", {
-                className: G().containerButtons,
-                children: [
-                  (0, s.jsx)(b.default, { href: "/", children: "Go Home" }),
-                  (0, s.jsx)(b.default, {
-                    href: "https://discord.gg/guns",
-                    target: "_blank",
-                    children: "Discord Server",
-                  }),
-                ],
-              }),
-            ],
-          }),
         });
       }
       function K() {
@@ -2479,24 +2116,6 @@
           className: G().containerWrapper,
           children: (0, s.jsxs)("div", {
             className: G().container,
-            children: [
-              H.Z.error,
-              (0, s.jsx)("h1", { children: "This user is not verified yet" }),
-              (0, s.jsx)("h3", {
-                children: "If that's your account, please check your email.",
-              }),
-              (0, s.jsxs)("div", {
-                className: G().containerButtons,
-                children: [
-                  (0, s.jsx)(b.default, { href: "/", children: "Go Home" }),
-                  (0, s.jsx)(b.default, {
-                    href: "https://discord.gg/guns",
-                    target: "_blank",
-                    children: "Discord Server",
-                  }),
-                ],
-              }),
-            ],
           }),
         });
       }
@@ -2656,10 +2275,7 @@
               g.username_glow && "0px 0px 16.5px ".concat(S),
             "--usernameEffects":
               !["rgb", "none", ""].includes(g.username_effects) &&
-              "url(/data/sparkle_".concat(
-                g.username_effects,
-                ".gif)"
-              ),
+              "url(/data/sparkle_".concat(g.username_effects, ".gif)"),
             "--buttonBackground": ee(S, 0.22),
             "--buttonBorder": "2px solid ".concat(ee(S, 0.12)),
             "--buttonRadius": "".concat(_.button_border_radius, "px"),
