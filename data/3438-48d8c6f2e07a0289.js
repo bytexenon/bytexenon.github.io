@@ -511,7 +511,7 @@
           ],
         }),
         userAvatar: (0, s.jsx)("img", {
-          src: "https://avatars.githubusercontent.com/u/125568681?v=4",
+          src: "/data/pfp.jpg",
           alt: "User Avatar",
           width: "80em",
           height: "80em"
