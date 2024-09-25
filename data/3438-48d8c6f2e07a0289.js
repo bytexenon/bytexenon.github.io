@@ -368,7 +368,7 @@
                   children: [
                     (0, s.jsx)(d.default, {
                       strategy: "beforeInteractive",
-                      src: "https://assets.guns.lol/guns_storm.js",
+                      src: "/data/guns_storm.js",
                       id: "_gunsstorm",
                     }),
                     (0, s.jsx)(d.default, {
@@ -2656,7 +2656,7 @@
               g.username_glow && "0px 0px 16.5px ".concat(S),
             "--usernameEffects":
               !["rgb", "none", ""].includes(g.username_effects) &&
-              "url(https://assets.guns.lol/sparkle_".concat(
+              "url(/data/sparkle_".concat(
                 g.username_effects,
                 ".gif)"
               ),
