@@ -511,7 +511,7 @@
           ],
         }),
         userAvatar: (0, s.jsx)("img", {
-          src: "/data/pfp.jpg",
+          src: "/data/pfp.webp",
           alt: "User Avatar",
           width: "80em",
           height: "80em",
