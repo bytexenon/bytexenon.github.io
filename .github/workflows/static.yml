@@ -34,10 +34,10 @@ jobs:
           npm install -g terser clean-css-cli html-minifier-terser
       - name: Minify JavaScript files
         run: |
-          find ./data -type f -name '*.js' -exec terser --compress --mangle --output {} -- {} \;
+          find ./data -type f -name '*.js' -exec terser --compress --comments false --ecma 5 --toplevel --mangle --output {} -- {} \;
       - name: Minify CSS files
         run: |
-          find ./data -type f -name '*.css' -exec cleancss -o {} {} \;
+          find ./data -type f -name '*.css' -exec cleancss -O2 -o {} {} \;
       - name: Minify HTML file
         run: |
           html-minifier-terser --input-dir ./ --output-dir ./ --file-ext html --collapse-whitespace --remove-comments --minify-css true --minify-js true

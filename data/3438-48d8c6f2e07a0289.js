@@ -1286,7 +1286,6 @@
                   children: [
                     (0, s.jsx)(x.e, {
                       color: "foreground",
-                      content: "UID ".concat(n.uid),
                       closeDelay: 150,
                       showArrow: !1,
                       offset: -2,
@@ -1670,7 +1669,6 @@
                       children: [
                         (0, s.jsx)(x.e, {
                           color: "foreground",
-                          content: "UID ".concat(n.uid),
                           closeDelay: 150,
                           showArrow: !1,
                           offset: 6,
@@ -1978,7 +1976,6 @@
                   children: [
                     (0, s.jsx)(x.e, {
                       color: "foreground",
-                      content: "UID ".concat(t.uid),
                       closeDelay: 150,
                       showArrow: !1,
                       offset: -2,
