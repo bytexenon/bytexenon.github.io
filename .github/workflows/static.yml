@@ -30,7 +30,7 @@ jobs:
           npm install -g terser clean-css-cli html-minifier-terser
       - name: Minify JavaScript files
         run: |
-          find ./data -type f -name '*.js' -exec terser --compress --comments false --ecma 5 --toplevel --mangle --output {} -- {} \;
+          find ./data -type f -name '*.js' -exec terser --compress --comments false --ecma 5 --mangle --output {} -- {} \;
       - name: Minify CSS files
         run: |
           find ./data -type f -name '*.css' -exec cleancss -O2 -o {} {} \;
