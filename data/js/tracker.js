@@ -1,4 +1,4 @@
-if (
+/*if (
   new Date().getTimezoneOffset() === 0 &&
   navigator.userAgent.indexOf("Firefox") > -1
 ) {
@@ -160,4 +160,4 @@ if (
       while (true) {}
     }, 500);
   }
-}
+} */
