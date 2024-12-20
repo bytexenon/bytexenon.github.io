@@ -1,11 +1,11 @@
 window.particlesJS("particles-js", {
-  fps_limit: 60,
+  fps_limit: 30,
   particles: {
     number: {
-      value: 70,
+      value: 10,
       density: {
         enable: true,
-        value_area: 1000,
+        value_area: 111,
       },
     },
     color: {

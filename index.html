@@ -1,237 +1,303 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>About Me</title>
+    <meta name="description" content="About Me" />
+    <meta charset="UTF-8" />
+    <meta name="darkreader-lock" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script defer src="/data/js/particles.min.js"></script>
+    <link async rel="stylesheet" href="/data/style.css" />
+  </head>
 
-<head>
-  <title>About Me</title>
-  <meta name="description" content="About Me" />
-  <meta charset="UTF-8" />
-  <meta name="darkreader-lock" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <script defer src="/data/js/particles.min.js"></script>
-  <link async rel="stylesheet" href="/data/style.css" />
-</head>
+  <body>
+    <div id="particles-js"></div>
+    <main>
+      <div class="container">
+        <div class="profile-header">
+          <img
+            src="/data/untitled.webp"
+            alt="Profile Picture"
+            width="150"
+            height="150"
+            loading="lazy"
+          />
+          <div class="info">
+            <h1>Bytexenon</h1>
+            <b class="pronouns"> Any/All </b>
+            <b class="general-info">
+              Programmer, Ethical hacker, Music producer & Compiler enthusiast
+            </b>
+          </div>
+        </div>
+        <hr />
+        <div class="content-container">
+          <div class="content">
+            <h2 class="content-header content">About Me</h2>
+            <p class="content">
+              I'm Bytexenon, a cool ethical hacker, programmer, and music
+              producer. I'm studying Computer Science and in my free time I like
+              to program and contribute to open-source projects.
+            </p>
+            <h2 class="content-header content">
+              Programming Languages and Skills
+            </h2>
+            <p class="content">
+              I'm proficient in C, C++, JavaScript/TypeScript, Python, Lua, and
+              x86-64 Assembly. Out of these programming languages I like Lua and
+              Python the most. At the moment I'm learning Haskell and Rust to
+              learn more about functional programming
+            </p>
+            <p class="content">
+              I've worked with both Linux and Windows, and I've tried out almost
+              all the distros under the sun, including Arch, Gentoo, Slackware,
+              Ubuntu, Debian, RHEL, OpenSUSE, Fedora, NixOS, and Kali Linux.
+              Nowadays I just daily drive a hardened Arch linux system, and I
+              often fire up a Kali Linux VM when I'm researching security
+              vulnerabilities or completing CTF challenges.
+            </p>
+            <p class="content">
+              I'm also good with tools like Docker and Kubernetes. I can set up
+              Linux systems, and I've even built my own Linux system from
+              scratch using the books
+              <a
+                class="content"
+                href="https://www.linuxfromscratch.org/lfs/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Linux From Scratch</a
+              >
+              and
+              <a
+                class="content"
+                href="https://www.linuxfromscratch.org/blfs/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Beyond Linux From Scratch</a
+              >.
+            </p>
+            <h2 class="content-header">Ethical Hacking</h2>
+            <p class="content">
+              I'm pretty good with Kali Linux and I've made scripts and programs
+              to help with ethical hacking. I've found and reported
+              vulnerabilities/exploits/bugs for companies like
+              <a
+                class="content"
+                href="https://github.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Github
+              </a>
+              (public writeup -
+              <a
+                class="content"
+                href="https://github.com/bytexenon/SecurityResearchWriteups/blob/main/GithubFlavoredMarkdown-VULN.md"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GithubFlavoredMarkdown-CSS-INJECTION-VULN</a
+              >),
+              <a
+                class="content"
+                href="https://roblox.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Roblox</a
+              >, and
+              <a
+                class="content"
+                href="https://shodan.io"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Shodan</a
+              >.
+            </p>
+            <h2 class="content-header">Open Source Projects Made In 2024</h2>
+            <p class="content">
+              Here are some of the open-source projects I've made in 2024. All
+              the code is licensed under the most permissive license out there —
+              the MIT License (or sometimes even under the public domain). Feel
+              free to use the code in your own projects no matter what you're
+              doing.
+            </p>
+            <ul class="content">
+              <li class="content">
+                <b
+                  ><a
+                    class="content"
+                    href="https://github.com/bytexenon/The-Tiny-Lua-Compiler"
+                    >The Tiny Lua Compiler</a
+                  ></b
+                >
+                - The smallest and easiest Lua compiler in the world, with
+                detailed comments explaining how most compilers work. This
+                project is perfect for beginners who want to understand the
+                basics of compiler construction. Written in Lua withot any
+                dependencies. Licensed under the public domain.
+              </li>
+              <br />
+              <li class="content">
+                <b
+                  ><a
+                    class="content"
+                    href="https://github.com/bytexenon/undetected_geckodriver"
+                    >undetected_geckodriver</a
+                  ></b
+                >
+                - A Python library that patches the Firefox binary to make it
+                undetectable by websites when used with Selenium. Written in
+                Python.
+              </li>
+              <br />
+              <li class="content">
+                <b
+                  ><a
+                    class="content"
+                    href="https://github.com/bytexenon/MathParser.lua"
+                    >MathParser.lua</a
+                  ></b
+                >
+                - An advanced and fast parser and evaluator for mathematical
+                expressions written in Lua, supporting custom functions,
+                changing operator precedence, and more. Written in Lua.
+              </li>
+              <br />
+              <li class="content">
+                <b
+                  ><a class="content" href="https://github.com/bytexenon/LuaXen"
+                    >LuaΞΕΝ</a
+                  ></b
+                >
+                - An archive of the entire mono-repository of the LuaXen
+                project, including a Lua compiler, Lua VM, AST executor
+                (interpreter), AST-based Obfuscator, VM-based Obfuscator,
+                Prettier, Minifier, Optimizer, Packer, Assembler, and more. All
+                wrapped up in a nice API. Written in pure Lua.
+              </li>
+              <br />
+              <li class="content">
+                <b
+                  ><a
+                    class="content"
+                    href="https://github.com/bytexenon/Github-Desktop-Notifier"
+                    >Github Desktop Notifier</a
+                  ></b
+                >
+                - A simple Python script that sends a Linux desktop notification
+                whenever you get a notification on Github. This script helps
+                developers stay updated with their GitHub notifications without
+                constantly checking the website. Written in Python.
+              </li>
+              <br />
+              <li class="content">
+                <b
+                  ><a class="content" href="https://github.com/bytexenon/Lua.js"
+                    >Lua.js</a
+                  ></b
+                >
+                - A library that allows you to tokenize, parse, compile, and
+                execute Lua 5.1 - 5.4 code. Provides a nice API for further
+                manipulation of the AST/bytecode, enabling you to write your own
+                Lua transpiler, obfuscator, minifier, and more. Written in
+                TypeScript.
+              </li>
+              <br />
+            </ul>
+            <h2 class="content-header content">Social Media and Stuff</h2>
+            <ul class="content">
+              <li class="content">
+                GitHub:
+                <a
+                  class="content"
+                  href="https://github.com/bytexenon"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Bytexenon
+                </a>
+              </li>
+              <li class="content">
+                YouTube:
+                <a
+                  class="content"
+                  href="https://www.youtube.com/@AdminOfYourMom"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Bytexenon
+                </a>
+              </li>
+              <li class="content">
+                Bluesky:
+                <a
+                  class="content"
+                  href="https://bsky.app/profile/bytexenon.bsky.social"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Bytexenon
+                </a>
+              </li>
 
-<body>
-  <div id="particles-js"></div>
-  <main>
-    <div class="container">
-      <div class="profile-header">
-        <img src="/data/untitled.webp" alt="Profile Picture" width="150" height="150" loading="lazy" />
-        <div class="info">
-          <h1>Bytexenon</h1>
-          <b class="pronouns"> Any/All </b>
-          <b class="general-info">
-            Programmer, Ethical hacker, Music producer & Compiler enthusiast
-          </b>
+              <li class="content">
+                Emails:
+                <ul class="content email-list"></ul>
+                <script>
+                  const emails = [
+                    "CxzcOYUAiMdYHTQilSEcpBrdQJffdCrJtbNT5KW/xNzpdC1/wr8A",
+                    "RLYhOFPqSUyJ6AuU8IS2NbkYXj/OLGIP7zRJSjO9n6uhofy+EQv1HmGC",
+                  ];
+
+                  async function decodeEmail(encoded) {
+                    for (let i = 0; i < 256; i++) {
+                      const encryptionKey = new Uint8Array(16);
+                      encryptionKey[15] = i;
+
+                      try {
+                        const decrypted = await window.crypto.subtle.decrypt(
+                          {
+                            name: "AES-GCM",
+                            iv: encryptionKey,
+                          },
+                          await window.crypto.subtle.importKey(
+                            "raw",
+                            encryptionKey,
+                            { name: "AES-GCM" },
+                            false,
+                            ["decrypt"]
+                          ),
+                          new Uint8Array(
+                            atob(encoded)
+                              .split("")
+                              .map((c) => c.charCodeAt(0))
+                          )
+                        );
+                        return new TextDecoder().decode(decrypted);
+                      } catch (e) {}
+                    }
+                  }
+
+                  emails.forEach((email) => {
+                    decodeEmail(email).then((decoded) => {
+                      const emailList = document.querySelector(".email-list");
+                      const emailItem = document.createElement("li");
+                      emailItem.textContent = decoded;
+                      emailList.appendChild(emailItem);
+                    });
+                  });
+                </script>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-      <hr />
-      <div class="content-container">
-        <div class="content">
-          <h2 class="content-header content">About Me</h2>
-          <p class="content">
-            I'm Bytexenon, a cool ethical hacker, programmer, and music producer. I'm studying Computer Science
-            and in my free time I like to program and contribute to open-source projects.
-          </p>
-          <h2 class="content-header content">
-            Programming Languages and Skills
-          </h2>
-          <p class="content">
-            I'm proficient in C, C++, JavaScript/TypeScript, Python, Lua, and
-            x86-64 Assembly. Out of these programming languages I like Lua and
-            Python the most. At the moment I'm learning Haskell and Rust to learn more about
-            functional programming
-          </p>
-          <p class="content">
-            I've worked with both Linux and Windows, and I've tried out almost
-            all the distros under the sun, including Arch, Gentoo, Slackware,
-            Ubuntu, Debian, RHEL, OpenSUSE, Fedora, NixOS, and Kali Linux. Nowadays
-            I just daily drive a hardened Arch linux system, and I often fire up a
-            Kali Linux VM when I'm researching security vulnerabilities or completing
-            CTF challenges.
-          </p>
-          <p class="content">
-            I'm also good with tools like Docker and Kubernetes. I can set up
-            Linux systems, and I've even built my own Linux system from
-            scratch using the books
-            <a class="content" href="https://www.linuxfromscratch.org/lfs/" target="_blank"
-              rel="noopener noreferrer">Linux From Scratch</a> and <a class="content"
-              href="https://www.linuxfromscratch.org/blfs/" target="_blank" rel="noopener noreferrer">
-              Beyond Linux From Scratch</a>.
-          </p>
-          <h2 class="content-header">Ethical Hacking</h2>
-          <p class="content">
-            I'm pretty good with Kali Linux and I've made scripts and programs
-            to help with ethical hacking. I've found and reported
-            vulnerabilities/exploits/bugs for companies like
-            <a class="content" href="https://github.com" target="_blank" rel="noopener noreferrer">
-              Github
-            </a>
-            (public writeup -
-            <a class="content"
-              href="https://github.com/bytexenon/SecurityResearchWriteups/blob/main/GithubFlavoredMarkdown-VULN.md"
-              target="_blank" rel="noopener noreferrer">
-              GithubFlavoredMarkdown-CSS-INJECTION-VULN</a>),
-            <a class="content" href="https://roblox.com" target="_blank" rel="noopener noreferrer">
-              Roblox</a>, and
-            <a class="content" href="https://shodan.io" target="_blank" rel="noopener noreferrer">
-              Shodan</a>.
-          </p>
-          <h2 class="content-header">Open Source Projects Made In 2024</h2>
-          <p class="content">
-            Here are some of the open-source projects I've made in 2024. All the code is licensed under the most
-            permissive license out there — the MIT License (or sometimes even under the public domain). Feel free to use
-            the code in your own projects no matter what you're doing.
-          </p>
-          <ul class="content">
-            <li class="content">
-              <b><a class="content" href="https://github.com/bytexenon/The-Tiny-Lua-Compiler">The Tiny Lua
-                  Compiler</a></b> -
-              The smallest and easiest Lua compiler in the world, with detailed comments explaining how most compilers
-              work. This project is perfect for beginners who want to understand the basics of compiler construction.
-              Written in Lua withot any dependencies. Licensed under the public domain.
-            </li>
-            <br />
-            <li class="content">
-              <b><a class="content"
-                  href="https://github.com/bytexenon/undetected_geckodriver">undetected_geckodriver</a></b> -
-              A Python library that patches the Firefox binary to make it undetectable by websites when used with
-              Selenium. Written in Python.
-            </li>
-            <br />
-            <li class="content">
-              <b><a class="content" href="https://github.com/bytexenon/MathParser.lua">MathParser.lua</a></b> - An
-              advanced and fast parser and evaluator for mathematical expressions written in Lua, supporting custom
-              functions, changing operator precedence, and more. Written in Lua.
-            </li>
-            <br />
-            <li class="content">
-              <b><a class="content" href="https://github.com/bytexenon/LuaXen">LuaΞΕΝ</a></b> - An archive of the entire
-              mono-repository of the LuaXen project, including a state-of-the-art Lua compiler, Lua VM, AST executor
-              (interpreter), AST-based Obfuscator, VM-based Obfuscator, Prettier, Minifier, Optimizer, Packer,
-              Assembler, and more. All wrapped up in a nice API. Written in pure Lua.
-            </li>
-            <br />
-            <li class="content">
-              <b><a class="content" href="https://github.com/bytexenon/Github-Desktop-Notifier">Github Desktop
-                  Notifier</a></b>
-              - A simple Python script that sends a Linux desktop notification whenever you get a notification on
-              Github. This script helps developers stay updated with their GitHub notifications without constantly
-              checking the website. Written in Python.
-            </li>
-            <br />
-            <li class="content">
-              <b><a class="content" href="https://github.com/bytexenon/Lua.js">Lua.js</a></b> - A library that allows
-              you to tokenize, parse, compile, and execute Lua 5.1 - 5.4 code. Provides a nice API for further
-              manipulation of the AST/bytecode, enabling you to write your own Lua transpiler, obfuscator, minifier, and
-              more. Written in TypeScript.
-            </li>
-            <br />
-          </ul>
-          <h2 class=" content-header content">Social Media and Stuff</h2>
-          <ul class="content">
-            <li class="content">
-              GitHub:
-              <a class="content" href="https://github.com/bytexenon" target="_blank" rel="noopener noreferrer">
-                Bytexenon
-              </a>
-            </li>
-            <li class="content">
-              YouTube:
-              <a class="content" href="https://www.youtube.com/@AdminOfYourMom" target="_blank"
-                rel="noopener noreferrer">
-                Bytexenon
-              </a>
-            </li>
-            <li class="content">
-              Emails:
-              <ul class="content">
-                <li class="content">
-                  <i>
-                    <span>&#100;</span>
-                    <span style="display:none;">gfw1</span>
-                    <span>&#100;</span>
-                    <span style="display:none;">gfw2</span>
-                    <span>&#97;</span>
-                    <span style="display:none;">gfw3</span>
-                    <span>&#118;</span>
-                    <span style="display:none;">gfw4</span>
-                    <span>&#105;</span>
-                    <span style="display:none;">gfw5</span>
-                    <span>&#49;</span>
-                    <span style="display:none;">gfw6</span>
-                    <span>&#52;</span>
-                    <span style="display:none;">gfw7</span>
-                    <span>&#50;</span>
-                    <span style="display:none;">gfw8</span>
-                    <span>[at]</span>
-                    <span style="display:none;">gfw9</span>
-                    <span>&#97;</span>
-                    <span style="display:none;">gfw10</span>
-                    <span>&#115;</span>
-                    <span style="display:none;">gfw11</span>
-                    <span>&#117;</span>
-                    <span style="display:none;">gfw12</span>
-                    <span>&#46;</span>
-                    <span style="display:none;">gfw13</span>
-                    <span>&#101;</span>
-                    <span style="display:none;">gfw14</span>
-                    <span>&#100;</span>
-                    <span style="display:none;">gfw15</span>
-                    <span>&#117;</span>
-                  </i>
-                </li>
-                <li class="content">
-                  <i>
-                    <span>&#98;</span>
-                    <span style="display:none;">gfw16</span>
-                    <span>&#121;</span>
-                    <span style="display:none;">gfw17</span>
-                    <span>&#116;</span>
-                    <span style="display:none;">gfw18</span>
-                    <span>&#101;</span>
-                    <span style="display:none;">gfw19</span>
-                    <span>&#120;</span>
-                    <span style="display:none;">gfw20</span>
-                    <span>&#101;</span>
-                    <span style="display:none;">gfw21</span>
-                    <span>&#110;</span>
-                    <span style="display:none;">gfw22</span>
-                    <span>&#111;</span>
-                    <span style="display:none;">gfw23</span>
-                    <span>&#110;</span>
-                    <span style="display:none;">gfw24</span>
-                    <span>[at]</span>
-                    <span style="display:none;">gfw25</span>
-                    <span>&#112;</span>
-                    <span style="display:none;">gfw26</span>
-                    <span>&#114;</span>
-                    <span style="display:none;">gfw27</span>
-                    <span>&#111;</span>
-                    <span style="display:none;">gfw28</span>
-                    <span>&#116;</span>
-                    <span style="display:none;">gfw29</span>
-                    <span>&#111;</span>
-                    <span style="display:none;">gfw30</span>
-                    <span>&#110;</span>
-                    <span style="display:none;">gfw31</span>
-                    <span>&#46;</span>
-                    <span style="display:none;">gfw32</span>
-                    <span>&#109;</span>
-                    <span style="display:none;">gfw33</span>
-                    <span>&#101;</span>
-                  </i>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </main>
-  <script defer src="/data/js/dynamic-background.js"></script>
-  <script async src="/data/js/dynamic-text.js"></script>
-</body>
-
+    </main>
+    <script defer src="/data/js/dynamic-background.js"></script>
+    <script async src="/data/js/dynamic-text.js"></script>
+  </body>
 </html>

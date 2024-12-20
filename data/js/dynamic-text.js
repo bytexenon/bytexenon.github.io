@@ -1,12 +1,12 @@
 let contentSections = document.querySelectorAll(".content");
 
-const animateElement = (element, isIntersecting) => {
+function animateElement(element, isIntersecting) {
   if (isIntersecting) {
     element.style.animation = "bounceIn 1s forwards";
     element.style.visibility = "visible";
-  } else {
-    element.style.animation = "none";
+    return;
   }
+  element.style.animation = "none";
 }
 
 const observer = new IntersectionObserver(
