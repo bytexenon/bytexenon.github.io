@@ -27,7 +27,7 @@
             <h1>Bytexenon</h1>
             <b class="pronouns"> Any/All </b>
             <b class="general-info">
-              Programmer, Ethical hacker, Music producer & Compiler enthusiast
+              Programmer, Ethical hacker, Music producer & Compiler developer
             </b>
           </div>
         </div>
@@ -45,9 +45,9 @@
             </h2>
             <p class="content">
               I'm proficient in C, C++, JavaScript/TypeScript, Python, Lua, and
-              x86-64 Assembly. Out of these programming languages I like Lua and
-              Python the most. At the moment I'm learning Haskell and Rust to
-              learn more about functional programming
+              x86-64 Assembly. Out of these programming languages I like
+              TypeScript, Lua, and Python the most. At the moment I'm learning
+              Haskell and Rust to learn more about functional programming.
             </p>
             <p class="content">
               I've worked with both Linux and Windows, and I've tried out almost
@@ -209,6 +209,11 @@
               <br />
             </ul>
             <h2 class="content-header content">Social Media and Stuff</h2>
+            <i class="content">
+              Any profiles not listed here must be automatically assumed to be
+              impersonators. If you encounter any other profiles claiming to be
+              me, please report them to me immediately.
+            </i>
             <ul class="content">
               <li class="content">
                 GitHub:
@@ -243,56 +248,65 @@
                   Bytexenon
                 </a>
               </li>
-
+              <li class="content">
+                Matrix:
+                <a
+                  class="content"
+                  href="https://matrix.to/#/@programming:matrix.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >@programming:matrix.org</a
+                >
+              </li>
               <li class="content">
                 Emails:
-                <ul class="content email-list"></ul>
+                <ul class="content lsegvhgu"></ul>
                 <script>
-                  const emails = [
+                  const z = [
                     "CxzcOYUAiMdYHTQilSEcpBrdQJffdCrJtbNT5KW/xNzpdC1/wr8A",
                     "RLYhOFPqSUyJ6AuU8IS2NbkYXj/OLGIP7zRJSjO9n6uhofy+EQv1HmGC",
                   ];
-
-                  async function decodeEmail(encoded) {
-                    for (let i = 0; i < 256; i++) {
-                      const encryptionKey = new Uint8Array(16);
-                      encryptionKey[15] = i;
-
+                  async function __q(e) {
+                    for (let t = 0; t < 256; t++) {
+                      const n = new Uint8Array(16);
+                      n[15] = t;
                       try {
-                        const decrypted = await window.crypto.subtle.decrypt(
-                          {
-                            name: "AES-GCM",
-                            iv: encryptionKey,
-                          },
+                        const t = await window.crypto.subtle.decrypt(
+                          { name: "AES-GCM", iv: n },
                           await window.crypto.subtle.importKey(
                             "raw",
-                            encryptionKey,
+                            n,
                             { name: "AES-GCM" },
-                            false,
+                            !1,
                             ["decrypt"]
                           ),
                           new Uint8Array(
-                            atob(encoded)
+                            atob(e)
                               .split("")
-                              .map((c) => c.charCodeAt(0))
+                              .map((e) => e.charCodeAt(0))
                           )
                         );
-                        return new TextDecoder().decode(decrypted);
+                        return new TextDecoder().decode(t);
                       } catch (e) {}
                     }
                   }
-
-                  emails.forEach((email) => {
-                    decodeEmail(email).then((decoded) => {
-                      const emailList = document.querySelector(".email-list");
-                      const emailItem = document.createElement("li");
-                      emailItem.textContent = decoded;
-                      emailList.appendChild(emailItem);
+                  z.forEach((e) => {
+                    __q(e).then((e) => {
+                      const t = document.querySelector(".lsegvhgu"),
+                        n = document.createElement("li");
+                      (n.textContent = e), t.appendChild(n);
                     });
                   });
                 </script>
               </li>
             </ul>
+            <hr />
+            <a
+              class="content"
+              href="about/public-key.asc"
+              download="bytexenon-public-key.asc"
+              >PGP Key [D149 8362 61D0 0C6E]</a
+            >
           </div>
         </div>
       </div>
