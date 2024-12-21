@@ -150,7 +150,7 @@
                 - The smallest and easiest Lua compiler in the world, with
                 detailed comments explaining how most compilers work. This
                 project is perfect for beginners who want to understand the
-                basics of compiler construction. Written in Lua withot any
+                basics of compiler construction. Written in Lua without any
                 dependencies. Licensed under the public domain.
               </li>
               <br />
@@ -275,41 +275,50 @@
                 Emails:
                 <ul class="content lsegvhgu"></ul>
                 <script>
-                  const z = [
-                    "CxzcOYUAiMdYHTQilSEcpBrdQJffdCrJtbNT5KW/xNzpdC1/wr8A",
-                    "RLYhOFPqSUyJ6AuU8IS2NbkYXj/OLGIP7zRJSjO9n6uhofy+EQv1HmGC",
-                  ];
-                  async function __q(e) {
-                    for (let t = 0; t < 256; t++) {
-                      const n = new Uint8Array(16);
-                      n[15] = t;
-                      try {
-                        const t = await window.crypto.subtle.decrypt(
-                          { name: "AES-GCM", iv: n },
-                          await window.crypto.subtle.importKey(
-                            "raw",
-                            n,
-                            { name: "AES-GCM" },
-                            !1,
-                            ["decrypt"]
-                          ),
-                          new Uint8Array(
-                            atob(e)
-                              .split("")
-                              .map((e) => e.charCodeAt(0))
-                          )
-                        );
-                        return new TextDecoder().decode(t);
-                      } catch (e) {}
+                  "use strict";
+                  if (
+                    !(
+                      ["bot", "spider", "crawl", "archive"].some((d) =>
+                        window.navigator.userAgent.toLowerCase().includes(d)
+                      ) || navigator.webdriver
+                    )
+                  ) {
+                    async function d(e) {
+                      for (let a = 0; a < 256; a++) {
+                        const b = new Uint8Array(16);
+                        b[15] = a;
+                        try {
+                          const c = await window.crypto.subtle.decrypt(
+                            { name: "AES-GCM", iv: b },
+                            await window.crypto.subtle.importKey(
+                              "raw",
+                              b,
+                              { name: "AES-GCM" },
+                              !1,
+                              ["decrypt"]
+                            ),
+                            new Uint8Array(
+                              atob(e)
+                                .split("")
+                                .map((f) => f.charCodeAt(0))
+                            )
+                          );
+                          return new TextDecoder().decode(c);
+                        } catch (c) {}
+                      }
                     }
-                  }
-                  z.forEach((e) => {
-                    __q(e).then((e) => {
-                      const t = document.querySelector(".lsegvhgu"),
-                        n = document.createElement("li");
-                      (n.textContent = e), t.appendChild(n);
+                    [
+                      "CxzcOYUAiMdYHTQilSEcpBrdQJffdCrJtbNT5KW/xNzpdC1/wr8A",
+                      "RLYhOFPqSUyJ6AuU8IS2NbkYXj/OLGIP7zRJSjO9n6uhofy+EQv1HmGC",
+                    ].forEach((e) => {
+                      d(e).then((a) => {
+                        const b = document.querySelector(".lsegvhgu"),
+                          c = document.createElement("li");
+                        c.textContent = a;
+                        b.appendChild(c);
+                      });
                     });
-                  });
+                  }
                 </script>
               </li>
             </ul>
