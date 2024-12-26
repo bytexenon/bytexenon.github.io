@@ -17,13 +17,14 @@
     <meta property="og:description" content="About Me" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://bytexenon.github.io" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <script defer src="/data/js/particles.min.js"></script>
     <link async rel="stylesheet" href="/data/style.css" />
   </head>
 
   <body>
-    <div id="particles-js"></div>
+    <div class="bg-grid">
+      <div class="bg-grid-lines"></div>
+    </div>
+    <div class="bg-grid-mask"></div>
     <main>
       <div class="container">
         <div class="profile-header">
@@ -273,13 +274,13 @@
               <li class="content">
                 Discord:
                 <span class="content available-upon-request"
-                  >[Available upon request]</span
+                  >[Available on request]</span
                 >
               </li>
               <li class="content">
                 Telegram:
                 <span class="content available-upon-request"
-                  >[Available upon request]</span
+                  >[Available on request]</span
                 >
               </li>
               <li class="content">
@@ -341,10 +342,26 @@
               >PGP Key [D149 8362 61D0 0C6E]</a
             >
           </div>
+          <!-- <div class="commit-log">
+            <h2 class="content-header commit-log">Recent Commits</h2>
+            <ul class="content commit-log">
+              <li class="content commit">
+                <a
+                  class="content commit-hash"
+                  href="https://github.com/bytexenon/Lua.js/commit/3e06fc439909a53e6e75d046ab7c4ff0362d0e65"
+                >
+                  [3e06fc4]
+                </a>
+                <p class="content commit-message">
+                  - refactor(ast-node): make VariableNode abstract and move
+                  variableType to subclasses
+                </p>
+              </li>
+            </ul>
+          </div> -->
         </div>
       </div>
     </main>
-    <script defer src="/data/js/dynamic-background.js"></script>
     <script async src="/data/js/dynamic-text.js"></script>
   </body>
 </html>
