@@ -1,2 +1,0 @@
-sesbian lex
-say gex
