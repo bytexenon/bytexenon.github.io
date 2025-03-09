@@ -1,3 +1,19 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700");
+
+@font-face {
+  font-family: "AtariClassicChunky";
+  src: url("/media/fonts/AtariClassicChunky.eot");
+  src: url("/media/fonts/AtariClassicChunky.eot?#iefix")
+      format("embedded-opentype"),
+    url("/media/fonts/AtariClassicChunky.woff2") format("woff2"),
+    url("/media/fonts/AtariClassicChunky.woff") format("woff"),
+    url("/media/fonts/AtariClassicChunky.svg#AtariClassicChunky") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Vars */
 :root {
   --white: #eeeeee;
