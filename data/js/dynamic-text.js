@@ -1,3 +1,8 @@
+// Check if it's mobile device
+if (/Mobi|iPhone|Android/i.test(navigator.userAgent)) {
+  return;
+}
+
 let contentSections = document.querySelectorAll(".content");
 
 function animateElement(element, isIntersecting) {
